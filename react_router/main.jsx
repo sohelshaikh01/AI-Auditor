@@ -1,9 +1,22 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
+import { 
+  createBrowserRouter, 
+  createRoutesFromElements, 
+  Route, 
+  RouterProvider 
+} from 'react-router-dom';
+
 import Layout from './Layout';
-import {  Home, About, Contact, User, Github, githubInfoLoader } from './components';
+import {  
+  Home, 
+  About, 
+  Contact, 
+  User, 
+  Github, 
+  githubInfoLoader 
+} from './components';
 
 // First Method
 // const router = createBrowserRouter([
@@ -27,7 +40,6 @@ import {  Home, About, Contact, User, Github, githubInfoLoader } from './compone
 
 //   }
 // ]);
-
 
 const router = createBrowserRouter(
   createRoutesFromElements(
