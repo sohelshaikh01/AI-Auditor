@@ -15,7 +15,14 @@
 **Plan for tomorrow:** Write tests for Audit Engine, Create Layout for User Input and Data filling in form using priceData JSON.
 
 ## Day 3 — 23-05-2026
-**Hours worked:**
+**Hours worked:** 5
+**What I did:** Optimized the AI Audit Engines for structure response, Integrated vitest for testing Audit Engine on different inputs, Write 5 tests considering 5 different use cases.
+**What I learned:** How to test an function, use of vitest from installtion to testing. Another Learning whole day Shadcn Working, basics of yml file and GitHub Actions to create automated workflow.
+**Blockers / what I'm stuck on:** Layout of inputs and Managing states which was today plans, but in learning takes whole time.
+**Plan for tomorrow:** Creating GitHub Action to automate testing, Writing .md files content and Completing User Input and Output Modules.
+
+## Day 4 — 24-05-2026
+**Hours worked:** 
 **What I did:**
 **What I learned:**
 **Blockers / what I'm stuck on:**

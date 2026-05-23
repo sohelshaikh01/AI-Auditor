@@ -1,12 +1,23 @@
 import { pricingData } from "../data/priceData";
 
-const auditEngine = (currentSub) => {
+/*
+  const currentSub = {
+    platform: "gemini"
+    price: 60,
+    plan: "ultra 5x",
+    category: "research"
+  }
+
+*/
+
+export const auditEngine = (currentSub) => {
   const currentPlan = pricingData.find(p => p.platform === currentSub.platform && p.plan === currentSub.plan);
   
   if (!currentPlan) return null;
 
   const currentSpend = currentPlan.price * currentSub.users;
   let bestAlternative = null;
+  let newSpending = null;
   let maxSavings = 0;
 
   // Core audit logic: evaluate same-vendor efficiency and cross-vendor alternatives
@@ -26,11 +37,16 @@ const auditEngine = (currentSub) => {
   }
 
   if (!bestAlternative || maxSavings <= 0) {
-    return { status: "optimized", message: "Current plan is highly optimized for your usage." };
+    return { 
+      needToUpdate: false, 
+      status: "optimized", 
+      message: "Current plan is highly optimized for your usage." };
   }
 
   // Finance-friendly reasoning generation
   let reason = "";
+  newSpending = bestAlternative.price * currentSub.users;
+
   if (bestAlternative.platform === currentPlan.platform) {
     reason = `Downgrading from ${currentPlan.platform} ${currentPlan.plan} to ${bestAlternative.plan} saves $${maxSavings}/mo; the current plan carries a premium per-seat cost that is overkill for ${currentSub.users} users.`;
   } else {
@@ -38,11 +54,17 @@ const auditEngine = (currentSub) => {
   }
 
   return {
+    needToUpdate: true,
     currentPlatform: currentPlan.platform,
     currentPlan: currentPlan.plan,
     currentSpend,
+    primaryUseCase: currentPlan.category,
+    newSpending,
     recommendedAction: `Switch to ${bestAlternative.platform} ${bestAlternative.plan}`,
     savings: maxSavings,
     reason
   };
 };
+
+
+
