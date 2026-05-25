@@ -3,9 +3,10 @@ import { pricingData } from "../data/priceData";
 /*
   const currentSub = {
     platform: "gemini"
-    price: 60,
     plan: "ultra 5x",
-    category: "research"
+    category: "research",
+    price: 60,
+    users: ""
   }
 
 */

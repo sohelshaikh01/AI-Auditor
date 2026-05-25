@@ -13,4 +13,9 @@ Also because of using Supabase for backend as a service, also that's why Next.js
 **Supabase**: It provides easier setup for development and auto generated APIs.
 - Making suitable for faster development and no need to deploy the backend.
 
+**Vitest**: It is testing library for application, most suitable with React & Javascript Application.
+Easy to install in project.
+
+**Shadcn**: Modern UI Library to create application.
+
 What you’d change if this had to handle 10k audits/day 

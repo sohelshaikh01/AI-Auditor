@@ -22,8 +22,22 @@
 **Plan for tomorrow:** Creating GitHub Action to automate testing, Writing .md files content and Completing User Input and Output Modules.
 
 ## Day 4 — 24-05-2026
+**Hours worked:** 0, Took days of because of family function.
+
+
+## Day 5 — 25-05-2026
+**Hours worked:** 3
+**What I did:** Written the GitHub Actions Workflow, Create Form and ReUsable Components and purpose of each test.
+**What I learned:** How to create reuable components, how to write GitHub Actions workflow.
+**Blockers / what I'm stuck on:** Form Multi Steps Management.
+**Plan for tomorrow:** Completing the Form State, Report Generation, Lead Capturing and Completing project.
+
+
+## Day 6 — 26-05-2026
 **Hours worked:** 
 **What I did:**
 **What I learned:**
 **Blockers / what I'm stuck on:**
 **Plan for tomorrow:**
+
+

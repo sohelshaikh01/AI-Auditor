@@ -1,7 +1,27 @@
-TESTS.md 
-List every automated test you wrote: filename, what it covers, how to run it 
- Minimum: 5 tests covering the audit engine specifically. They must actually run. 
-We will run them. 
-.github/workflows/ci.yml 
-A GitHub Actions workflow that runs lint + tests on every push to main . Must show 
-green checks on your latest commit.
+# TESTS for AuditEngine
+
+**Filename**: src/tests/auditEngine.tests.js
+
+**What it covers**: It tests the auditEngine function on different inputs to check its functionality.
+- Check for Positive Response
+- Check for Negative Response
+- Check for no response
+
+1. Expected better Saving Plan.
+
+2. To get current plan as optimized.
+
+3. Expected No Plan Exists.
+
+4. Expected Tram Plan Requirement Switch.
+
+5. Same Platform Downgrade.
+
+
+**How to run it**: Run through command.
+
+
+> `npm install` - install all dependencies
+
+> `npm test` - run the test
+
