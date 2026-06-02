@@ -14,8 +14,12 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <MainPage />
+      },
+      {
+        path: "/reports/:reportId",
+        element: <ReportPage />
       }
-      // Also add shared page for reports
+      
     ]
   }
 ])

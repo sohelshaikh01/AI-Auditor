@@ -1,23 +1,26 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import AppIcon from './AppIcon';
 
 
 const Navbar = () => {
 
   const navs = [
     { name: "Home", link: "/"},
-    { name: "Audit", link: "/audit" }
+    { name: "Reports", link: "/reports/:reportId" }
   ]
 
   return (
-    <div className='flex flex-row h-full items-center justify-between gap-4 w-full bg-gray-500 text-white'>
+    <div className='flex flex-row h-full items-center w-full bg-gray-900 text-white'>
         <div className='flex flex-row gap-2 items-center px-8 py-2 h-full'>
-          <img src="./images" alt="OA" />
-          <h1>Optimized AI</h1>
+          <AppIcon size={26} background={"#f59e0b"} />
+          <h1 className='font-bold text-lg'>Ledger.ai</h1>
         </div>
+
         <nav>
-          <ul className='list-none flex flex-row gap-16 px-8 py-2'>
-            {navs.map((nav) => (<Link to={nav.link} key={nav.name}>{nav.name}</Link>))}
+          <ul className='list-none flex flex-row gap-10 px-6 py-2 font-semibold'>
+            {navs.map((nav) => (
+              <Link to={nav.link} key={nav.name}>{nav.name}</Link>
+            ))}
           </ul>
         </nav>
     </div>
