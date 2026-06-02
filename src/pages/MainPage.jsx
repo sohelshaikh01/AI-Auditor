@@ -7,6 +7,7 @@ import Select from "../components/Select";
 import { pricingData } from "../data/priceData.js";
 import { auditEngine } from "../utils/auditEngine.js";
 import { generateSummary } from "../lib/ai-summary.js";
+import Container from "../components/Container.jsx";
 
 const STORAGE_KEY = "audit-form-data";
 
@@ -104,14 +105,23 @@ const MainPage = () => {
     setLoading(false);
   };
 
-  if (loading) return <div className="p-8 text-center">Loading audit results...</div>;
+  if (loading) return (
+    <div className="p-8 h-lvh w-full flex justify-center items-center py-8 sm:py-12 text-gray-300 bg-gradient-to-t from-black to-violet-950">
+      <p className="px-3 py-2 border-2 border-gray-500 rounded-xl">Getting Audit Ready...</p>
+    </div>
+  )
+  
 
   return (
-    <div className="w-full flex justify-center px-4 py-8">
+    <Container>
+    <div className="w-full flex justify-center py-8 sm:py-12 bg-gradient-to-t from-black to-violet-950">
       {!expenses ? (
-        <div className="w-full max-w-2xl rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8 shadow-sm">
-          <h1 className="text-3xl font-bold text-center">Get Your Free Audit</h1>
-          <p className="text-sm text-zinc-500 text-center mt-2">
+        <div className="w-full max-w-xl rounded-2xl border border-gray-500 text-white bg-gradient-to-t from-black to-violet-950 p-6 sm:p-8 shadow-md shadow-violet-500">
+          
+          <h1 className="text-[28px] font-bold text-center">
+            Get Your Free Audit
+            </h1>
+          <p className="text-md text-gray-500 text-center">
             Analyze your current software spending
           </p>
 
@@ -120,6 +130,7 @@ const MainPage = () => {
               label="Platform: "
               {...register("platform", { required: true })}
               options={platformOptions}
+              className="bg-violet-900 text-white"
             />
 
             <Select
@@ -127,6 +138,7 @@ const MainPage = () => {
               {...register("category", { required: true })}
               disabled={!platform}
               options={categoryOptions}
+              className="bg-violet-900 text-white"
             />
 
             <Select
@@ -134,6 +146,7 @@ const MainPage = () => {
               {...register("plan", { required: true })}
               disabled={!category}
               options={planOptions}
+              className="bg-violet-900 text-white"
             />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -142,6 +155,7 @@ const MainPage = () => {
                   label="Seats: "
                   type="number"
                   placeholder="Enter seats"
+                  className="bg-violet-950 text-white ml-2"
                   {...register("users", { required: true })}
                 />
               </div>
@@ -151,13 +165,14 @@ const MainPage = () => {
                   label="Price: "
                   type="number"
                   placeholder="Enter monthly price"
+                  className="bg-violet-950 text-white ml-2"
                   {...register("price", { required: true })}
                 />
                 {errors.price && <p className="text-red-500 text-sm mt-1">Price is required</p>}
               </div>
             </div>
 
-            <Button type="submit" className="mt-2">
+            <Button type="submit" className="mt-2 rounded-lg">
               Get Audit
             </Button>
           </form>
@@ -212,7 +227,6 @@ const MainPage = () => {
               <div className="mt-2 p-4 bg-zinc-50 rounded-lg border border-zinc-100">
                 <label className="text-xs font-bold uppercase text-zinc-500">AI Summary</label>
                 <p className="text-sm text-zinc-700 mt-1 italic">
-                  {/* "Based on your stack, you are over-provisioned on seats for this tier. Downgrading to the standard plan will cover your use case while saving substantial capital..." */}
                   {expenses.aiSummary}
                 </p>
               </div>
@@ -221,6 +235,7 @@ const MainPage = () => {
         </div>
       )}
     </div>
+    </Container>
   );
 };
 

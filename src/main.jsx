@@ -5,6 +5,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import MainPage from './pages/MainPage.jsx';
+import ReportPage from './pages/ReportPage.jsx';
 
 const router = createBrowserRouter([
   {
