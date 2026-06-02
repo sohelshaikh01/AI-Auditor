@@ -33,12 +33,9 @@
 **Plan for tomorrow:** Completing the Form State, Report Generation, Lead Capturing and Completing project.
 
 
-## Day 6 — 26-05-2026
-**Hours worked:** 
-**What I did:**
-**What I learned:**
-**Blockers / what I'm stuck on:**
-**Plan for tomorrow:**
-
-resume on 01-06-2026
-work on ai response 02-06-2026
+## Day 6 — 02-05-2026
+**Hours worked:** 3
+**What I did:** AI Integration for summary, Fixed Proper Header, Form & Footer UI.
+**What I learned:** Learn About AI API integration.
+**Blockers / what I'm stuck on:** Form UI states, Managing components.
+**Plan for tomorrow:** Lead Capture button and form, Storing data in supabase.
