@@ -40,4 +40,5 @@
 **Blockers / what I'm stuck on:**
 **Plan for tomorrow:**
 
-
+resume on 01-06-2026
+work on ai response 02-06-2026

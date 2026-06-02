@@ -59,6 +59,7 @@ export const auditEngine = (currentSub) => {
     currentPlatform: currentPlan.platform,
     currentPlan: currentPlan.plan,
     currentSpend,
+    bestAlternative,
     primaryUseCase: currentPlan.category,
     newSpending,
     recommendedAction: `Switch to ${bestAlternative.platform} ${bestAlternative.plan}`,
